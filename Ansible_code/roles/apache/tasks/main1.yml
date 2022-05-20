@@ -1,0 +1,8 @@
+
+- name: Creates directory
+  file:
+    path: /home/insigniac-arpit/Desktop/workspace/test1
+    state: directory
+
+- name: Include a play after another play
+  include: debug.yml

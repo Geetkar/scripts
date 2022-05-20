@@ -1,0 +1,32 @@
+# create a file 
+- name: Ansible create file if it doesn't exist example
+  file:
+      path: "/home/insigniac-arpit/Desktop/workspace/test1.txt"
+      state: touch 
+
+# create a file with some contant
+- name: Ansible create file with content example
+  copy:
+    dest: "/home/insigniac-arpit/Desktop/workspace/test2.txt"
+    content: |
+      Hello I am deepak Geetkar
+      I Am working in NCS  
+
+#create a file with permission like read write and execute
+- name: Ansible create new file with permissions example.
+  file:
+    path: "/home/insigniac-arpit/Desktop/workspace/test3.txt"
+    state: file
+    mode: 0777
+    owner: insigniac-arpit
+
+#create a multiply files   
+# - name: Ansible create multiple files example
+#   file: 
+#     path: "/home/insigniac-arpit/Desktop/workspace/files{{ items }}"
+#     state: touch
+#     mode: "{{ 0777 }}"
+#   with_items:
+#   - { location: 'main4.txt',mode: '0566'}
+#   - { location: 'main5.txt',mode: '0766'}
+#   - { location: 'main6.txt',mode: '0777'}

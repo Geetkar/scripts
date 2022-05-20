@@ -1,0 +1,7 @@
+
+- hosts: localhost
+  become: yes
+  vars:
+    ansible_sudo_pass: ncs12345
+  roles:
+    - role: apache

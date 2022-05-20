@@ -1,0 +1,20 @@
+# - name: Basic Template Example  
+#   template:  
+#     src: /home/insigniac-arpit/Desktop/workspace/ansible/roles/python/tamplats/index.html.j2 
+#     dest: /var/www/html/index.html
+
+# - name: start nginx
+#   service: 
+#     name: nginx
+#     state: restarted
+
+  # notify:
+  #        - restarted nginx
+
+# - name: Install a list of packages
+#   apt:
+#     name:
+#       - docker.io
+#     state: present
+
+

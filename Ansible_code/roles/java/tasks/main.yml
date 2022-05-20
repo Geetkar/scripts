@@ -1,0 +1,44 @@
+# - name: this is first
+#   debug:
+#     msg: "this is java file in main.yml first"
+
+# - name: this is second
+#   debug:
+#     msg: "this is java file in main.yml second"
+
+# - name: shell
+#   shell: echo "hello"
+#   register: var1
+
+# - debug:
+#     msg: "{{ ex_var }}"
+
+
+####  using apt module install nginx
+
+- name: Install a list of packages
+  apt:
+    name:
+      - nginx
+      - postgresql
+    state: present
+
+- name: Basic Template Example  
+  template:  
+    src: /home/insigniac-arpit/Desktop/workspace/ansible/roles/java/templats/index.html.j2
+    dest: /var/www/html/index.html
+
+  
+
+- name: Restart apache2
+  service:
+    name: apache2
+    state: stopped
+  
+- debug:
+    msg: "{{ ex_var }}"
+
+
+
+
+  

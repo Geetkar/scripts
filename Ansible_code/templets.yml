@@ -1,0 +1,16 @@
+---  
+- hosts: localhost  
+  vars:  
+    variable1: 'Hello'  
+    variable2: 'My first playbook using template'  
+  tasks:  
+    - name: Basic Template Example  
+      template:  
+        src: home/insigniac-arpit/Desktop/workspace/ansible/roles/apache/Templets/index.html.j2 
+        dest: /home/insigniac-arpit/Desktop/workspace/test2.txt
+
+
+# - name: Include a play after another play
+#   include: index.j2
+
+  

@@ -1,0 +1,39 @@
+#####  using apt module install nginx
+
+# - name: Install a list of packages
+#   apt:
+#     name:
+#       - nginx
+#       - postgresql
+#     state: present
+
+
+##### using service module host nginx
+# - name: Start service nginx, based on running process /usr/bin/nginx
+#   service:
+#     name: nginx
+#     pattern: /usr/bin/nginx
+#     state: stopped
+
+
+#### using copy module copy  a file
+- name: copy a file to one folder to other folder
+  copy:
+    src: "/home/insigniac-arpit/Desktop/workspace/test3.txt"
+    dest: "/home/insigniac-arpit/Desktop/workspace/ansible-test"
+    mode: u=rw,g=r,o=r
+
+##### using Archive module change file type
+- name: Compress directory /path/to/foo/ into /path/to/foo.tgz
+  archive:
+    path: "/home/insigniac-arpit/Desktop/workspace"
+    dest: "/home/insigniac-arpit/Desktop/workspace/test2.tgz"
+
+#### using archive change multiple file type
+- name: Create a bz2 archive of multiple files, rooted at /path
+  archive:
+    path:
+    - "/home/insigniac-arpit/Desktop/workspace/test3.txt"
+    - "/home/insigniac-arpit/Desktop/workspace/test2.txt"
+    dest: "/home/insigniac-arpit/Desktop/workspace/.tar.bz2"
+    format: bz2

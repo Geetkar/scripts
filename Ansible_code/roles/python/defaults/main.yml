@@ -1,0 +1,18 @@
+# v1: this is a extra vars
+# v2: this is a variable
+
+
+
+devices:
+  RTRA:
+    ip_addr: 192.168.0.2
+    location: HQ
+  RTRB:
+    ip_addr: 192.168.0.3
+    location: HQ
+  RTRAA:
+    ip_addr: 192.168.0.6
+    location: BR1
+  RTRBB:
+    ip_addr: 192.168.0.7
+    location: BR2
