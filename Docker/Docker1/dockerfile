@@ -1,0 +1,11 @@
+FROM ubuntu
+
+WORKDIR /tmp
+
+RUN echo "i am Deepak Geetkar" > /tmp/testfile1
+
+ENV name deepak geetkar
+
+COPY testfile2 /tmp
+
+ADD test.tar.gz /tmp

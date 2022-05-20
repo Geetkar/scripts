@@ -1,0 +1,9 @@
+version: "3"
+services:
+  frontend:
+    image: 'httpd alpine'
+    ports:
+       - "8000:80"
+    volumes:
+      - ./ot/:/usr/local/apache2/htdocs/
+      
