@@ -1,0 +1,24 @@
+
+name: "deepak"
+age: "22"
+city: "indore"
+Edu: "b.tech"
+clg: piemr
+  
+variable1: 'Hello'  
+variable2: 'My first playbook using template'  
+
+collage:
+  enrolment:
+    id: 1
+    name: deepak
+    clg: piemr
+    age: 22
+
+
+
+           
+        
+     
+    
+    

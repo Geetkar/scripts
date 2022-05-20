@@ -1,0 +1,5 @@
+- name: execute loops with_dict
+  debug: 
+    msg: “{{ item.value }}”
+  with_dict: "{{ devices }}"
+

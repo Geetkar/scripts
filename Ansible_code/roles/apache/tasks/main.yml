@@ -1,0 +1,7 @@
+- name: install apache2                      
+  debug:
+    msg: "this is {{ name }}"
+    
+- name: Include a play after another play
+  include: loop.yml
+  

@@ -1,0 +1,18 @@
+---
+- hosts: localhost
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks: 
+    - name: Install a list of packages
+      apt:
+        name:
+          - apache2
+        state: present
+    - name: Start service nginx, based on running process /usr/bin/nginx
+      service:
+        name: apache2
+        pattern: /usr/bin/apache2
+        state: started

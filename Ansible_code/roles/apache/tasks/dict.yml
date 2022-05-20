@@ -1,0 +1,15 @@
+
+# ## using a dict with call defaults  and print dict
+
+# - name: Dict in ansible using in loop
+#   debug:
+#     msg: "{{ item.value }}"
+#   with_dict: "{{ collage }}"
+
+
+# ## using loop condition and when  using 
+# - name: Run with items greater than 5
+#   debug: 
+#     msg: "hello"
+#   loop: [ 0, 2, 4, 6, 8, 10 ]
+#   when: item ==  2 

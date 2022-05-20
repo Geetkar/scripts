@@ -1,0 +1,34 @@
+# create a new directory with the help of loops in using with_items
+
+- name: Creating multiple tomcat instance
+  file: dest=/home/insigniac-arpit/Desktop/workspace/folder1{{ item }}  state=directory
+    # dest: "/home/insigniac-arpit/Desktop/workspace/folder1{{ item }}" 
+    # state: directory
+  with_items:
+    - 1
+    - 2
+    - 3
+
+
+  ## create a new directory with the help of loops in using with_sequence
+- name: Creating multiple tomcat instance
+  file: dest=/home/insigniac-arpit/Desktop/workspace/folder2/foo{{ item }}  state=directory
+  with_sequence: start=1 end=3
+  
+
+
+
+## using a dict with call defaults  and print dict
+
+- name: Dict in ansible using in loop
+  debug:
+    msg: "{{ item.value }}"
+  with_dict: "{{ collage }}"
+
+
+## using loop condition and when  using 
+- name: Run with items greater than 5
+  debug: 
+    msg: "hello"
+  loop: [ 0, 2, 4, 6, 8, 10 ]
+  when: item ==  2 
