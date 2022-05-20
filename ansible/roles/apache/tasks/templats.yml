@@ -1,0 +1,5 @@
+#  templates call to index.html and store the data in dest
+- name: basic template 
+  template:
+    src: /home/insigniac-arpit/Desktop/deepak/ansible/roles/apache/templats/index.html.j2
+    dest: /home/insigniac-arpit/Desktop/deepak/Directory/folder2/index.html # or using /via/www/html/index.html

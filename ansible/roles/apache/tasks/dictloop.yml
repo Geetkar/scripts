@@ -1,0 +1,9 @@
+
+
+- name: dict in ansible using in loop 
+  debug: 
+    msg: "{{ item.value }}"
+  with_dict: "{{ collage }}"
+
+- name: call a main1.yml task
+  include: directory.yml

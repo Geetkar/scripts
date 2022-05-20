@@ -1,0 +1,18 @@
+
+# variable define 
+var1: "I am good boy"
+var2: "I am working in Ncs"
+
+# extra var in ansible
+ex_var: I am belong to India
+
+
+# create a dict in ansible with using loop
+collage:
+  data:
+    name: deepak
+    city: indore
+    age: 22
+    region: mp
+    exp: 2 year
+

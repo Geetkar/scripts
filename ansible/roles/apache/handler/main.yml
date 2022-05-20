@@ -1,0 +1,20 @@
+### handler define with notify
+
+# - name: Template configuration file
+#   template:
+#     src: template.j2
+#     dest: /etc/foo.conf
+#   notify:
+#     - Restart memcached
+
+#   handlers:
+#     - name: Restart memcached
+#       ansible.builtin.service:
+#         name: memcached
+#         state: restarted
+
+# ## Templates exmple  
+# - name: start nginx
+#   service: 
+#     name: nginx
+#     state: restarted 
