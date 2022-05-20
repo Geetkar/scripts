@@ -1,0 +1,2 @@
+dt=$(date)
+echo $dt
