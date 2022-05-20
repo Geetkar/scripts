@@ -1,0 +1,27 @@
+# create a directory using loop 
+- name: creating multiple dict using loop 
+  file:
+    dest: /home/insigniac-arpit/Desktop/deepak/Directory/folder{{ item }}
+    state: directory 
+  with_items: 
+    - 1
+    - 2
+    - 3
+    - 4
+
+# create a directory using loop 
+- name: creating multiple dict using loop 
+  file:
+    dest: /home/insigniac-arpit/Desktop/deepak/Directory/folder1/folder1/file.{{ item }}   # in there we also create folder and file  
+    state: touch
+  with_sequence: start=0 end=3
+
+## using when condition in loop
+- name: condition using when 
+  debug:
+    msg: "hello"
+  loop: [0,1,2,3,4,5,6,7,8,9,10]
+  when: item > 3
+
+- name: call a main1.yml task
+  include: templats.yml

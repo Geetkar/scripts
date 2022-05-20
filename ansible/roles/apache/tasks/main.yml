@@ -1,0 +1,22 @@
+
+## install or using apt 
+- name: install apache2
+  apt: 
+    name: apache2
+    state: present
+
+# print variable is define in defaults   
+
+- name: print variable
+  debug:
+    msg: "Hello{{ var1 }}"
+
+  debug:
+    msg: "{{ var2 }}"
+
+# print ex var is define in defaults
+  debug:
+    msg: "{{ ex_var }}"
+
+- name: call a main1.yml task
+  include: dictloop.yml

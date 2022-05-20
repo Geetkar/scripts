@@ -1,0 +1,8 @@
+- hosts: localhost
+  # become: yes 
+  # user: ansible
+  # connection: ssh
+  # gather_facts: yes 
+  
+  roles:
+    - role: apache
