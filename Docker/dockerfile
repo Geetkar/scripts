@@ -1,0 +1,13 @@
+From ubuntu
+
+RUN apt-get update
+
+RUN apt-get install python -y
+
+RUN apt-get install nginx -y
+
+VOLUME ["/myvolume1"]
+
+
+cmd ["tail", "-f", "/dev/null"]
+
